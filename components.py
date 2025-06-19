@@ -69,6 +69,9 @@ def display_product(result):
             価格：{product['price']}
     """)
 
+    # 在庫数の表示
+    
+
     # 「商品カテゴリ」と「メーカー」と「ユーザー評価」
     st.code(f"""
         商品カテゴリ：{product['category']}\n
