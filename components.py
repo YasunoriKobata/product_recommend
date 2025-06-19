@@ -70,7 +70,10 @@ def display_product(result):
     """)
 
     # 在庫数の表示
-    
+    if product["stock_status"] == "残りわずか":
+        st.warning(ct.FEW_PRODUCTS, icon=ct.ICON_FEW_PRODUCTS)
+    elif product["stock_status"] == "なし":
+        st.error(ct.OUT_OF_STOCK, icon=ct.ICON_OUT_OF_STOCK)
 
     # 「商品カテゴリ」と「メーカー」と「ユーザー評価」
     st.code(f"""
